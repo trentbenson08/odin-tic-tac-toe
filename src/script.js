@@ -1,11 +1,15 @@
-'use strict';
+const obj = ((doc) => {
+  const boardState = new Array(9);
 
-const obj = (function(doc){
+  // cache DOM
+  const board = doc.querySelector('#board');
+  const cells = doc.querySelectorAll('.cell');
 
-    const _boardState = new Array(9);
+	// event listners
+	cells.forEach((cell) => {cell.addEventListener('click', alterCell)});
 
-    // cache DOM
-    const _cells = doc.querySelectorAll(".cell");
-    
+
+	function alterCell(event){
+		console.log(event)
+	}
 })(document);
-
