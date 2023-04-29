@@ -22,9 +22,12 @@ html{
 }
 
 .cell:hover{
-    background-color: gainsboro;
+    background-color: rgb(226, 226, 226);
 }
 .cell:active{
-    background-color: lightgray;
+    background-color: rgb(196, 196, 196);
 }
 
+#access{
+    margin-top: 6px;
+}
