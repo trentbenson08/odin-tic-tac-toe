@@ -1,13 +1,13 @@
 # Tic Tac Toe
 
-![alt text](./misc/Screenshot%202023-04-29%20at%2012-56-49%20Title.png)
+![alt text](./misc/Screenshot 2023-04-29 at 22-19-27 Tic-Tac-Toe.png)
 
 ## Description
 
 This repository contains my code for the 'Tic Tac Toe' project found in The Odin Project's JavaScript course.
 Play a game of Tic Tac Toe against a friend.
 
-This project utilizes the module pattern.
+This project utilizes the module pattern, all game logic and state is privately stored within a closure.
 
 ## Built With
 

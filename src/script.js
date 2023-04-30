@@ -4,8 +4,8 @@
   const boardState = new Array(9).fill(undefined);
 	const playerState = [
 		{turn: 1},
-		{name: 'Player 1', marker: 'x'},
-		{name: 'Player 2', marker: 'o'},
+		{name: 'Player 1'},
+		{name: 'Player 2'},
 		{winner: undefined}
 	];
 
@@ -22,10 +22,13 @@
     	[0, 4, 8], [2, 4, 6]
   	];
 		winningPositions.forEach((pos) => {
-			if (boardState[pos[0]] === undefined && boardState[pos[1]] === undefined && boardState[pos[2]] === undefined) {
+			if (boardState[pos[0]] === undefined && 
+					boardState[pos[1]] === undefined && 
+					boardState[pos[2]] === undefined) {
 				return;
 			}
-			if (boardState[pos[0]] === boardState[pos[1]] && boardState[pos[1]] === boardState[pos[2]]) {
+			if (boardState[pos[0]] === boardState[pos[1]] && 
+					boardState[pos[1]] === boardState[pos[2]]) {
 				const mark = boardState[pos[0]];
 				if (mark === 'x'){
 					playerState[3].winner = 'Player 1';
@@ -52,21 +55,19 @@
 
 
 	function alterBoard(event){
-
 		if (playerState[3].winner !== undefined){
 			return;
 		}
-
 		const cellIndex = event.target.getAttribute('data-index');
 		if (boardState[cellIndex] !== undefined) {
 			return;
 		}
 		let mark;
 		if (playerState[0].turn === 1) {
-			mark = playerState[1].marker;
+			mark = 'x';
 			playerState[0].turn = 2; 
 		} else { 
-			mark = playerState[2].marker;
+			mark = 'o';
 			playerState[0].turn = 1; 
 		}
 		boardState[cellIndex] = mark;

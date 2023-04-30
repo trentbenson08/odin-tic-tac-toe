@@ -5,7 +5,6 @@ html{
 body{
     display: flex;
     flex-direction: column;
-
     align-items: center;
 }
 
@@ -32,11 +31,16 @@ body{
 
 .cell{
     background-color: white;
+    font-size: 4rem;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
 }
 
 .cell:hover{
     background-color: rgb(226, 226, 226);
 }
+
 .cell:active{
     background-color: rgb(196, 196, 196);
 }
@@ -50,7 +54,16 @@ body{
     margin-top: 8px;
 }
 
+#new-game{
+    background-color: rgb(226, 226, 226);
+    padding: 2px;
+    border: 2px solid black;
+}
+
+#new-game:active{
+    background-color: rgb(196, 196, 196);
+}
+
 #info{
     position: relative;
-    left: 8px;
 }
