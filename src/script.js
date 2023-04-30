@@ -10,7 +10,7 @@
 	];
 
 	
-  const cells = doc.querySelectorAll('.cell');
+	const cells = doc.querySelectorAll('.cell');
 	const newGame = doc.querySelector('#new-game');
 	const info = doc.querySelector('#info');
 
@@ -18,9 +18,9 @@
 	function checkWinCondition(){
 		const winningPositions = [    
 			[0, 1, 2], [3, 4, 5], [6, 7, 8], 
-    	[0, 3, 6], [1, 4, 7], [2, 5, 8], 
-    	[0, 4, 8], [2, 4, 6]
-  	];
+			[0, 3, 6], [1, 4, 7], [2, 5, 8], 
+			[0, 4, 8], [2, 4, 6]
+		];
 		winningPositions.forEach((pos) => {
 			if (boardState[pos[0]] === undefined && 
 					boardState[pos[1]] === undefined && 
@@ -92,3 +92,10 @@
 
 
 })(document);
+
+
+// Player Factory
+
+// Board Module
+
+// Display Module
