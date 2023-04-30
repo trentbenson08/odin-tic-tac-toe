@@ -5,10 +5,11 @@
 	const playerState = [
 		{turn: 1},
 		{name: 'Player 1', marker: 'x'},
-		{name: 'Player 2', marker: 'o'}
+		{name: 'Player 2', marker: 'o'},
+		{winner: undefined}
 	];
 
-
+	const board = doc.querySelector('#board');
   const cells = doc.querySelectorAll('.cell');
 	const newGame = doc.querySelector('#new-game');
 
@@ -24,7 +25,16 @@
 				return;
 			}
 			if (boardState[pos[0]] === boardState[pos[1]] && boardState[pos[1]] === boardState[pos[2]]) {
-				console.log('WINNER');
+				const mark = boardState[pos[0]];
+				if (mark === 'x'){
+					playerState[3].winner = 'Player 1';
+					
+				} else if (mark === 'o') {
+					playerState[3].winner = 'Player 2';
+
+				}
+				
+				// git commit -m "Update checkWinCondition to stop new player input"
 			}
 		});
 	}
@@ -44,6 +54,11 @@
 
 
 	function alterBoard(event){
+
+		if (playerState[3].winner !== undefined){
+			return;
+		}
+
 		const cellIndex = event.target.getAttribute('data-index');
 		if (boardState[cellIndex] !== undefined) {
 			return;
@@ -67,6 +82,7 @@
 			boardState[i] = undefined;
 		}
 		playerState[0].turn = 1;
+		playerState[3].winner = undefined;
 		renderBoard();
 	}
 
