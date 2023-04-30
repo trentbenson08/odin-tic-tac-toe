@@ -14,6 +14,7 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        "quotes":"error"
+        "quotes": "error",
+        "semi": "error"
     }
 }
