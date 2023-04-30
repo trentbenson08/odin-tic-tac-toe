@@ -9,9 +9,10 @@
 		{winner: undefined}
 	];
 
-	const board = doc.querySelector('#board');
+	
   const cells = doc.querySelectorAll('.cell');
 	const newGame = doc.querySelector('#new-game');
+	const info = doc.querySelector('#info');
 
 
 	function checkWinCondition(){
@@ -28,13 +29,10 @@
 				const mark = boardState[pos[0]];
 				if (mark === 'x'){
 					playerState[3].winner = 'Player 1';
-					
 				} else if (mark === 'o') {
 					playerState[3].winner = 'Player 2';
-
 				}
-				
-				// git commit -m "Update checkWinCondition to stop new player input"
+				info.innerText = `${playerState[3].winner} Wins!`;
 			}
 		});
 	}
@@ -83,6 +81,7 @@
 		}
 		playerState[0].turn = 1;
 		playerState[3].winner = undefined;
+		info.innerText = '';
 		renderBoard();
 	}
 
