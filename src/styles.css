@@ -17,8 +17,8 @@ body{
 #board-container{
     background-color: black;
     border: 4px solid black;
-    height: clamp(100px, 40vw, 500px);
-    width: clamp(100px, 40vw, 500px);
+    height: clamp(200px, 50vh, 400px);
+    width: clamp(200px, 40vw, 400px);
 }
 
 #board{
@@ -31,10 +31,11 @@ body{
 
 .cell{
     background-color: white;
-    font-size: 4rem;
+    font-size: calc(2vw + 2vh);
     font-weight: 200;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .cell:hover{
@@ -49,7 +50,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: clamp(100px, 40vw, 500px);
+    width: clamp(200px, 40vw, 400px);
     gap: 8px;
     margin-top: 8px;
 }

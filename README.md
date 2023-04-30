@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-![alt text](./misc/Screenshot%202023-04-29%20at%2022-19-27%20Tic-Tac-Toe.png)
+![alt text](./misc/Screenshot%202023-04-30%20at%2016-53-13%20Tic-Tac-Toe.png)
 
 ## Description
 
